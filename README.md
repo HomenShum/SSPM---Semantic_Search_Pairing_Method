@@ -1,4 +1,4 @@
-# SSME---Semantic_Search_Pairing_Method
+# SSPM---Semantic_Search_Pairing_Method
 NuHarbor Security, Almanna Cyber, The Cybersecurity Polyglot Project
 
 # Idea Title: Semantic Search Pairing Method (SSPM)
