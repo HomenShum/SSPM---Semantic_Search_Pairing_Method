@@ -1,0 +1,30 @@
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}" />
+    <EventID>15</EventID>
+    <EventName>FileCreateStreamHash</EventName>
+    <EventDescription>This event logs when a named file stream is created, and it generates events that log the hash of the contents of the file to which the stream is assigned (the unnamed stream), as well as the contents of the named stream. There are malware variants that drop their executables or configuration settings via browser downloads, and this event is aimed at capturing that based on the browser attaching a Zone.Identifier "mark of the web" stream.</EventDescription>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>15</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000010</Keywords>
+    <TimeCreated SystemTime="2023-04-15T14:23:45.2947437Z" />
+    <EventRecordID>123456</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="1234" ThreadID="5678" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>COMPUTERNAME</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2023-04-15 14:23:45.294</Data>
+    <Data Name="ProcessGuid">{01234567-89ab-cdef-0123-456789abcdef}</Data>
+    <Data Name="ProcessId">4321</Data>
+    <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+    <Data Name="TargetFilename">C:\Users\username\Documents\example.txt</Data>
+    <Data Name="CreationUtcTime">2023-04-15 14:23:45.294</Data>
+    <Data Name="HashType">SHA256</Data>
+    <Data Name="Hash">0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</Data>
+  </EventData>
+</Event>

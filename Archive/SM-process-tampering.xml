@@ -1,0 +1,36 @@
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}" />
+    <EventID>25</EventID>
+    <EventName>ProcessTampering (Process image change)</EventName>
+    <EventDescription>This event is generated when process hiding techniques such as "hollow" or "herpaderp" are being detected.</EventDescription>
+    <Version>5</Version>
+    <Level>Informational</Level>
+    <Task>ProcessTampering</Task>
+    <Opcode>Info</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2023-04-16T08:30:00.000000Z" />
+    <EventRecordID>123456</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="1234" ThreadID="5678" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>COMPUTERNAME</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="RuleName">ProcessTampering</Data>
+    <Data Name="UtcTime">2023-04-16 08:30:00.000</Data>
+    <Data Name="ProcessGuid">{0f03650e-44d7-6215-0000-0010496e4200}</Data>
+    <Data Name="ProcessId">1000</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="FileVersion">10.0.19041.1023 (WinBuild.160101.0800)</Data>
+    <Data Name="Description">Windows Command Processor</Data>
+    <Data Name="CommandLine">cmd.exe /c notepad.exe</Data>
+    <Data Name="CurrentDirectory">C:\Temp</Data>
+    <Data Name="User">DOMAIN\Username</Data>
+    <Data Name="LogonGuid">{26c1aa3d-96e2-7f60-0000-0020168d0f00}</Data>
+    <Data Name="LogonId">0x00000a58</Data>
+    <Data Name="IntegrityLevel">High</Data>
+    <Data Name="Hashes">MD5=de8429d206c4e0dc1c1496a5ea5e5c5a,SHA256=3f4d4ad6a9d547e77df1c84904c8d2cd2f238c62a346e44e8575088f22ec9b91</Data>
+  </EventData>
+</Event>

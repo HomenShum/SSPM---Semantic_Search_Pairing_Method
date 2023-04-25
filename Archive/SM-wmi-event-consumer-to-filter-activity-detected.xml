@@ -1,0 +1,33 @@
+<event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <system>
+    <provider name="Microsoft-Windows-Sysmon" guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}" />
+    <EventID>21</EventID>
+    <EventName>WmiEvent (WmiEventConsumerToFilter activity detected)</EventName>
+    <EventDescription>When a consumer binds to a filter, this event logs the consumer name and filter path.</EventDescription>
+    <version>5</version>
+    <level>4</level>
+    <task>21</task>
+    <opcode>0</opcode>
+    <keywords>0x8000000000000000</keywords>
+    <time-created systemTime="2023-04-16T10:30:00.000000Z" />
+    <eventRecordID>123456</eventRecordID>
+    <correlation />
+    <execution processID="1234" threadID="5678" />
+    <channel>Microsoft-Windows-Sysmon/Operational</channel>
+    <computer>COMPUTER_NAME</computer>
+    <security />
+  </system>
+  <EventData>
+    <Data Name="EventType">WmiEvent</Data>
+    <Data Name="Image">C:\Windows\System32\wbem\wmiprvse.exe</Data>
+    <Data Name="User">NT AUTHORITY\SYSTEM</Data>
+    <Data Name="Operation">WmiEventConsumerToFilter activity detected</Data>
+    <Data Name="ConsumerName">CustomEventConsumer</Data>
+    <Data Name="FilterName">CustomEventFilter</Data>
+    <Data Name="ConsumerType">ActiveScriptEventConsumer</Data>
+    <Data Name="FilterType">EventFilter</Data>
+    <Data Name="ProcessId">1234</Data>
+    <Data Name="ThreadId">5678</Data>
+    <Data Name="UtcTime">2023-04-16 10:30:00.000</Data>
+  </EventData>
+</event>

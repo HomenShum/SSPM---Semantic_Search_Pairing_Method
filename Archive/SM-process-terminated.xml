@@ -1,0 +1,27 @@
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}" />
+    <EventID>5</EventID>
+    <EventName>Process terminated</EventName>
+    <EventDescription>The process terminate event reports when a process terminates. It provides the UtcTime, ProcessGuid and ProcessId of the process.</EventDescription>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>5</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2023-04-16T12:34:56.7890123Z" />
+    <EventRecordID>123456</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="2596" ThreadID="4560" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>DESKTOP-EXAMPLE</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2023-04-16 12:34:56.7890123</Data>
+    <Data Name="ProcessGuid">{9A9B9C9D-0000-1234-5678-0123456789AB}</Data>
+    <Data Name="ProcessId">4560</Data>
+    <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+    <Data Name="User">DESKTOP-EXAMPLE\user1</Data>
+  </EventData>
+</Event>

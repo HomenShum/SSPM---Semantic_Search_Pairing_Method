@@ -1,0 +1,30 @@
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+        <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+        <EventID>10</EventID>
+        <EventName>ProcessAccess</EventName>
+        <EventDescription>The process accessed event reports when a process opens another process, an operation that’s often followed by information queries or reading and writing the address space of the target process. This enables detection of hacking tools that read the memory contents of processes like Local Security Authority (Lsass.exe) in order to steal credentials for use in Pass-the-Hash attacks. </EventDescription>
+        <Version>5</Version>
+        <Level>4</Level>
+        <Task>10</Task>
+        <Opcode>0</Opcode>
+        <Keywords>0x8000000000000000</Keywords>
+        <TimeCreated SystemTime="2023-04-16T13:20:15.123456Z" />
+        <EventRecordID>123456</EventRecordID>
+        <Correlation />
+        <Execution ProcessID="2080" ThreadID="2084" />
+        <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+        <Computer>DESKTOP-EXAMPLE</Computer>
+        <Security UserID="S-1-5-18" />
+    </System>
+    <EventData>
+        <Data Name="SourceProcessGuid">{A1B2C3D4-E5F6-1234-5678-90ABCDEF1234}</Data>
+        <Data Name="SourceProcessId">1234</Data>
+        <Data Name="SourceImage">C:\Windows\System32\source.exe</Data>
+        <Data Name="TargetProcessGuid">{B1C2D3E4-F5A6-2345-6789-01BCDEFA2345}</Data>
+        <Data Name="TargetProcessId">5678</Data>
+        <Data Name="TargetImage">C:\Windows\System32\target.exe</Data>
+        <Data Name="GrantedAccess">0x1410</Data>
+        <Data Name="CallTrace">C:\Windows\SYSTEM32\ntdll.dll+9a574|C:\Windows\System32\KERNELBASE.dll+1234abcd|C:\Windows\System32\source.exe+12abcd</Data>
+    </EventData>
+</Event>

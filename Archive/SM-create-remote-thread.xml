@@ -1,0 +1,34 @@
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+        <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}" />
+        <EventID>8</EventID>
+        <EventName>CreateRemoteThread</EventName>
+        <EventDescription>The CreateRemoteThread event detects when a process creates a thread in another process. This technique is used by malware to inject code and hide in other processes. The event indicates the source and target process. It gives information on the code that will be run in the new thread: StartAddress, StartModule and StartFunction. </EventDescription>
+        <Version>5</Version>
+        <Level>4</Level>
+        <Task>8</Task>
+        <Opcode>0</Opcode>
+        <Keywords>0x8000000000000000</Keywords>
+        <TimeCreated SystemTime="2023-04-16T10:20:30.123456Z" />
+        <EventRecordID>123456</EventRecordID>
+        <Correlation />
+        <Execution ProcessID="4" ThreadID="80" />
+        <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+        <Computer>DESKTOP-EXAMPLE</Computer>
+        <Security UserID="S-1-5-18" />
+    </System>
+    <EventData>
+        <Data Name="RuleName">-</Data>
+        <Data Name="UtcTime">2023-04-16 10:20:30.123</Data>
+        <Data Name="SourceProcessGUID">{A1B2C3D4-E5F6-47A8-89AB-1C2D3E4F5G6H}</Data>
+        <Data Name="SourceProcessId">1234</Data>
+        <Data Name="SourceImage">C:\Windows\System32\example.exe</Data>
+        <Data Name="TargetProcessGUID">{F1E2D3C4-B5A6-49C8-D9E1-0F2A3B4C5D6E}</Data>
+        <Data Name="TargetProcessId">5678</Data>
+        <Data Name="TargetImage">C:\Windows\System32\example-target.exe</Data>
+        <Data Name="NewThreadId">999</Data>
+        <Data Name="StartAddress">0x1234567890ABCDEF</Data>
+        <Data Name="StartModule">C:\Windows\System32\example-target.dll</Data>
+        <Data Name="StartFunction">example_function</Data>
+    </EventData>
+</Event>

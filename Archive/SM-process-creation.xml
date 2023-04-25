@@ -1,0 +1,43 @@
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+        <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+        <EventID>1</EventID>
+        <EventName>Process creation</EventName>
+        <EventDescription>The process creation event provides extended information about a newly created process. The full command line provides context on the process execution.</EventDescription>
+        <Version>5</Version>
+        <Level>4</Level>
+        <Task>1</Task>
+        <Opcode>0</Opcode>
+        <Keywords>0x8000000000000000</Keywords>
+        <TimeCreated SystemTime="2021-09-01T10:15:03.248345800Z" />
+        <EventRecordID>12345</EventRecordID>
+        <Correlation />
+        <Execution ProcessID="1234" ThreadID="5678" />
+        <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+        <Computer>DESKTOP-123456</Computer>
+        <Security UserID="S-1-5-18" />
+    </System>
+    <EventData>
+        <Data Name="UtcTime">2021-09-01 10:15:03.247</Data>
+        <Data Name="ProcessGuid">{86107A5D-EEF6-60C1-0000-001066F72900}</Data>
+        <Data Name="ProcessId">1234</Data>
+        <Data Name="Image">C:\Windows\system32\notepad.exe</Data>
+        <Data Name="FileVersion">10.0.19041.1 (WinBuild.160101.0800)</Data>
+        <Data Name="Description">Notepad</Data>
+        <Data Name="Product">Microsoft® Windows® Operating System</Data>
+        <Data Name="Company">Microsoft Corporation</Data>
+        <Data Name="OriginalFileName">NOTEPAD.EXE</Data>
+        <Data Name="CommandLine">notepad.exe</Data>
+        <Data Name="CurrentDirectory">C:\Windows\system32\</Data>
+        <Data Name="User">DESKTOP-123456\Admin</Data>
+        <Data Name="LogonGuid">{86107A5D-EC59-60C1-0000-00203B090200}</Data>
+        <Data Name="LogonId">0x12345678</Data>
+        <Data Name="TerminalSessionId">1</Data>
+        <Data Name="IntegrityLevel">High</Data>
+        <Data Name="Hashes">SHA1=ABCD1234EFGH5678IJKL9012MNOP3456QRST7890</Data>
+        <Data Name="ParentProcessGuid">{86107A5D-EEDC-60C1-0000-00109A240100}</Data>
+        <Data Name="ParentProcessId">8888</Data>
+        <Data Name="ParentImage">C:\Windows\Explorer.EXE</Data>
+        <Data Name="ParentCommandLine">C:\Windows\Explorer.EXE</Data>
+    </EventData>
+</Event>

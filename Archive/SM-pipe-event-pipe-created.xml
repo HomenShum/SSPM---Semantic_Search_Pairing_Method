@@ -1,0 +1,32 @@
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}" />
+    <EventID>17</EventID>
+    <EventName>PipeEvent (Pipe Created)</EventName>
+    <EventDescription>This event generates when a named pipe is created. Malware often uses named pipes for interprocess communication.</EventDescription>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>17</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2023-04-16T08:30:00.000000Z" />
+    <EventRecordID>12345</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="1234" ThreadID="5678" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>examplecomputername</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="RuleName">Pipe Created Rule</Data>
+    <Data Name="UtcTime">2023-04-16 08:30:00.000</Data>
+    <Data Name="PipeName">\\.\pipe\examplepipe</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c net use \\127.0.0.1\exampleshare &amp;&amp; copy \\127.0.0.1\exampleshare\file.txt \\.\pipe\examplepipe</Data>
+    <Data Name="Hash">ABCDEFG1234567890</Data>
+    <Data Name="HashType">SHA256</Data>
+    <Data Name="PipeCreatorProcessGuid">{01234567-89AB-CDEF-0123-456789ABCDEF}</Data>
+    <Data Name="PipeCreatorProcessId">1234</Data>
+    <Data Name="PipeCreatorImage">C:\Windows\System32\svchost.exe</Data>
+  </EventData>
+</Event>

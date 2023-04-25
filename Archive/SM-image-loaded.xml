@@ -1,0 +1,43 @@
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}" />
+      <EventID>7</EventID>
+      <EventName>Image loaded</EventName>
+      <EventDescription>The image loaded event logs when a module is loaded in a specific process. This event is disabled by default and needs to be configured with the "–l" option. It indicates the process in which the module is loaded, hashes and signature information. The signature is created asynchronously for performance reasons and indicates if the file was removed after loading. This event should be configured carefully, as monitoring all image load events will generate a significant amount of logging.</EventDescription>
+      <Version>5</Version>
+      <Level>4</Level>
+      <Task>7</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8000000000000000</Keywords>
+      <TimeCreated SystemTime="2023-04-16T13:24:53.1234567Z" />
+      <EventRecordID>123456</EventRecordID>
+      <Correlation />
+      <Execution ProcessID="4" ThreadID="56" />
+      <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+      <Computer>DESKTOP-EXAMPLE</Computer>
+      <Security UserID="S-1-5-18" />
+   </System>
+   <EventData>
+      <Data Name="UtcTime">2023-04-16 13:24:53.1234567</Data>
+      <Data Name="ProcessGuid">{12345678-1234-1234-1234-1234567890AB}</Data>
+      <Data Name="ProcessId">1234</Data>
+      <Data Name="Image">C:\Windows\System32\example.exe</Data>
+      <Data Name="ImageLoaded">C:\Windows\System32\example_dll.dll</Data>
+      <Data Name="FileVersion">1.0.0.1</Data>
+      <Data Name="Description">Example DLL</Data>
+      <Data Name="Product">Example Product</Data>
+      <Data Name="Company">Example Company</Data>
+      <Data Name="OriginalFileName">example_dll.dll</Data>
+      <Data Name="CommandLine">"C:\Windows\System32\example.exe" /exampleParameter</Data>
+      <Data Name="CurrentDirectory">C:\Windows\System32\</Data>
+      <Data Name="User">DESKTOP-EXAMPLE\Administrator</Data>
+      <Data Name="LogonGuid">{12345678-1234-1234-1234-1234567890AC}</Data>
+      <Data Name="LogonId">0x123456</Data>
+      <Data Name="TerminalSessionId">1</Data>
+      <Data Name="IntegrityLevel">High</Data>
+      <Data Name="Hashes">SHA1=1A2B3C4D5E6F7G8H9I0JKLMNOPQRSTU;MD5=ABCDEFGHIJKLMNOP;SHA256=1234567890ABCDEFGHIJKLMNOPQRSTUVWX;IMPHASH=1234567890ABCDEFGHIJKLMNOPQRSTUVWX</Data>
+      <Data Name="Signed">true</Data>
+      <Data Name="Signature">Example Company</Data>
+      <Data Name="SignatureStatus">Valid</Data>
+   </EventData>
+</Event>

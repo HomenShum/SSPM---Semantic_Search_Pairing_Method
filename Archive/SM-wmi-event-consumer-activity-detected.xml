@@ -1,0 +1,30 @@
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}" />
+    <EventID>20</EventID>
+    <EventName>WmiEvent (WmiEventConsumer activity detected)</EventName>
+    <EventDescription>This event logs the registration of WMI consumers, recording the consumer name, log, and destination.</EventDescription>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>20</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2023-04-16T10:34:23.5646402Z" />
+    <EventRecordID>12345</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="1234" ThreadID="5678" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>COMPUTERNAME</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="RuleName">WmiEventConsumer activity detected</Data>
+    <Data Name="UtcTime">2023-04-16 10:34:23.564 (UTC)</Data>
+    <Data Name="ProcessGuid">{12345678-1234-1234-1234-123456789012}</Data>
+    <Data Name="ProcessId">1234</Data>
+    <Data Name="ConsumerName">\\.\root\subscription:CommandLineEventConsumer.Name=MyConsumer</Data>
+    <Data Name="ConsumerType">CommandLineEventConsumer</Data>
+    <Data Name="FilterName">__EventFilter.Name=\"MyFilter\"</Data>
+    <Data Name="FilterQuery">SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA 'Win32_Process' AND TargetInstance.Name = 'cmd.exe'</Data>
+  </EventData>
+</Event>
